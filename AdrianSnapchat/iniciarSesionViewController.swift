@@ -30,8 +30,18 @@ class iniciarSesionViewController: UIViewController {
             print("Intentando iniciar sesion")
             if error != nil {
                 print("Se presento el siguiente error: \(String(describing: error))")
+                Auth.auth().createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!) { (user, error) in
+                    print("Intentando crear un usuario")
+                    if error != nil {
+                        print("Se presento el siguiente error al crear usuario: \(String(describing: error))")
+                    }else{
+                        print("El usuario fue creado satisfactoriamente")
+                        self.performSegue(withIdentifier: "iniciarsesionSegue", sender: nil)
+                    }
+                }
             }else{
                 print("Inicio de sesion exitoso")
+                self.performSegue(withIdentifier: "iniciarsesionSegue", sender: nil)
             }
         }
     }

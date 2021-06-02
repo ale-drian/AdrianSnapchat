@@ -92,11 +92,94 @@
                         <outlet property="emailTextField" destination="K0Z-HL-XLn" id="qFA-a8-4gB"/>
                         <outlet property="passwordTextField" destination="a9E-H6-0B6" id="dZ7-NV-Vcj"/>
                         <outlet property="signInButton" destination="JZA-Sd-ebt" id="GIA-hw-lm0"/>
+                        <segue destination="9G8-aa-Y26" kind="presentation" identifier="iniciarsesionSegue" modalPresentationStyle="fullScreen" id="XRc-VU-J5a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="63.616071428571423"/>
+            <point key="canvasLocation" x="233" y="60"/>
+        </scene>
+        <!--Snaps View Controller-->
+        <scene sceneID="A0B-XB-u5S">
+            <objects>
+                <viewController id="iL6-yp-FAe" customClass="SnapsViewController" customModule="AdrianSnapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VWb-uw-H4f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="MZp-lm-YYo"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eDS-rC-xHA">
+                        <barButtonItem key="leftBarButtonItem" title="Cerrar Sesión" id="eH7-sb-J4w">
+                            <color key="tintColor" red="0.57106598980000001" green="0.1868181246" blue="0.14933958829999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="cerrarSesionTapped:" destination="iL6-yp-FAe" id="JK8-Ad-JBq"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="KqP-X9-EBd">
+                            <color key="tintColor" red="0.57106598980000001" green="0.1868181246" blue="0.14933958829999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="xd1-OO-isz" kind="show" id="ak0-eh-g8P"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jEl-u7-wZ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1714" y="60"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="YXA-mS-g4c">
+            <objects>
+                <viewController id="xd1-OO-isz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U2a-bL-Jie">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fDh-Qc-5dF">
+                                <rect key="frame" x="87" y="108" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="WwI-AE-bLA"/>
+                                    <constraint firstAttribute="width" constant="240" id="w6O-Mh-c02"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fDh-Qc-5dF" firstAttribute="centerX" secondItem="U2a-bL-Jie" secondAttribute="centerX" id="Lkb-b8-D1x"/>
+                            <constraint firstItem="fDh-Qc-5dF" firstAttribute="top" secondItem="MQo-x1-72z" secondAttribute="top" constant="20" id="YMw-o3-nsp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MQo-x1-72z"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="PLD-2N-ezG">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="35j-tj-FXI">
+                            <color key="tintColor" red="0.57106598980000001" green="0.1868181246" blue="0.14933958829999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7iC-fi-wgX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2449" y="52"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yQk-Pq-fo3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9G8-aa-Y26" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="tff-La-PYt"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hip-3M-njY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iL6-yp-FAe" kind="relationship" relationship="rootViewController" id="ZXk-rj-fnW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="esg-3l-Whf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976.81159420289862" y="59.598214285714285"/>
         </scene>
     </scenes>
     <resources>
