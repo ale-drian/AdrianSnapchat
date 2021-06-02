@@ -8,4 +8,5 @@ target 'AdrianSnapchat' do
   # Pods for AdrianSnapchat
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
 end

@@ -65,6 +65,11 @@
                                     <action selector="iniciarSesionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a53-kq-gcr"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JZA-Sd-ebt" customClass="GIDSignInButton">
+                                <rect key="frame" x="87" y="559" width="240" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -86,11 +91,12 @@
                     <connections>
                         <outlet property="emailTextField" destination="K0Z-HL-XLn" id="qFA-a8-4gB"/>
                         <outlet property="passwordTextField" destination="a9E-H6-0B6" id="dZ7-NV-Vcj"/>
+                        <outlet property="signInButton" destination="JZA-Sd-ebt" id="GIA-hw-lm0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="64"/>
+            <point key="canvasLocation" x="137.68115942028987" y="63.616071428571423"/>
         </scene>
     </scenes>
     <resources>
