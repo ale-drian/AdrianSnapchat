@@ -24,16 +24,18 @@ class iniciarSesionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         ref.child("usuarios").setValue("hola"){ (err, resp) in
+         /*ref.child("usuarios").setValue("hola"){ (err, resp) in
             print(err)
             print(resp)
             print("ejecucion")
-        }
+        }*/
         
         // Auth con google
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance().signIn()
-        
+        if Auth.auth().currentUser != nil {
+            self.performSegue(withIdentifier: "iniciarsesionSegue", sender: nil)
+        }
         
     }
 

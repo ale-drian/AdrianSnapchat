@@ -14,8 +14,8 @@
 		68021F5F266303A7009BB696 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68021F5D266303A7009BB696 /* Main.storyboard */; };
 		68021F61266303A8009BB696 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68021F60266303A8009BB696 /* Assets.xcassets */; };
 		68021F64266303A8009BB696 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68021F62266303A8009BB696 /* LaunchScreen.storyboard */; };
+		6810EEC92675BEE800A196B3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6810EEC82675BEE800A196B3 /* GoogleService-Info.plist */; };
 		6871E216266818080087F55F /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6871E215266818080087F55F /* SnapsViewController.swift */; };
-		688252D92671FB0900D6718C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 688252D82671FB0900D6718C /* GoogleService-Info.plist */; };
 		688252DD2672000E00D6718C /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688252DC2672000E00D6718C /* Usuario.swift */; };
 		688252DF2672109400D6718C /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688252DE2672109400D6718C /* RegistroViewController.swift */; };
 		689C1310266E722000BB7F4D /* ImagenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689C130F266E722000BB7F4D /* ImagenViewController.swift */; };
@@ -33,9 +33,9 @@
 		68021F60266303A8009BB696 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68021F63266303A8009BB696 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68021F65266303A8009BB696 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6810EEC82675BEE800A196B3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/Ale google/AdrianSnapchat/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6871E21426680E340087F55F /* AdrianSnapchat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AdrianSnapchat.entitlements; sourceTree = "<group>"; };
 		6871E215266818080087F55F /* SnapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
-		688252D82671FB0900D6718C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/Ale google/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		688252DC2672000E00D6718C /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		688252DE2672109400D6718C /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
 		689C130F266E722000BB7F4D /* ImagenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagenViewController.swift; sourceTree = "<group>"; };
@@ -99,9 +99,9 @@
 				68021F57266303A7009BB696 /* AppDelegate.swift */,
 				68021F59266303A7009BB696 /* SceneDelegate.swift */,
 				68021F5D266303A7009BB696 /* Main.storyboard */,
+				6810EEC82675BEE800A196B3 /* GoogleService-Info.plist */,
 				68021F60266303A8009BB696 /* Assets.xcassets */,
 				68021F62266303A8009BB696 /* LaunchScreen.storyboard */,
-				688252D82671FB0900D6718C /* GoogleService-Info.plist */,
 				68021F65266303A8009BB696 /* Info.plist */,
 			);
 			path = AdrianSnapchat;
@@ -189,7 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68021F64266303A8009BB696 /* LaunchScreen.storyboard in Resources */,
-				688252D92671FB0900D6718C /* GoogleService-Info.plist in Resources */,
+				6810EEC92675BEE800A196B3 /* GoogleService-Info.plist in Resources */,
 				68021F61266303A8009BB696 /* Assets.xcassets in Resources */,
 				68021F5F266303A7009BB696 /* Main.storyboard in Resources */,
 			);

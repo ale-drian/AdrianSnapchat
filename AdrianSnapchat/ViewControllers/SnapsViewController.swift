@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class SnapsViewController: UIViewController {
 
@@ -16,7 +18,15 @@ class SnapsViewController: UIViewController {
     }
     
     @IBAction func cerrarSesionTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        //dismiss(animated: true, completion: nil)
+        do{
+           try Auth.auth().signOut()
+            //navigationController?.pushViewController(iniciarSesionViewController(), animated: true)
+            
+            self.present(UINavigationController(rootViewController: iniciarSesionViewController()), animated: true, completion: nil)
+        }catch{
+            print("Error")
+        }
     }
     
     /*

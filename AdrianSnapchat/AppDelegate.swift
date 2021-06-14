@@ -9,10 +9,11 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import FirebaseDatabase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
-
+final var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         //Firebase
@@ -50,8 +51,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             if err != nil {
                 print((err?.localizedDescription)!)
             } else {
-                print("SIGNIN")
-              return
+                print("Google")
+                print(authResult?.user.email)
+           print(Database.database().reference().child("usuarios"))
+                Database.database().reference().child("usuarios").child((authResult?.user.uid)!).observe(DataEventType.value, with: { (snapshot) in
+                    print("Usuario Google--")
+                    if !snapshot.exists() {
+                       print("Usuario Google")
+                        Database.database().reference().child("usuarios").child((authResult?.user.uid)!).child("email").setValue((authResult?.user.email)!)
+                    }
+                }){ (error) in
+                    print("error.localizedDescription")
+                    print(error)
+                }
+                DispatchQueue.main.async {
+                    let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let home = mainStoryboardIpad.instantiateViewController(identifier: "SnapsViewController") as!
+                            SnapsViewController
+                
+                        let window = UIApplication.shared.delegate!.window!!
+                        window.rootViewController = nil
+                        window.rootViewController = home
+                        
+                        UIView.transition(with: window, duration: 0.4, options: [.transitionCrossDissolve], animations: nil, completion: nil)
+                    }
+                /*
+                let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Circles") as UIViewController
+                            self.window = UIWindow(frame: UIScreen.main.bounds)
+                            self.window?.rootViewController = initialViewControlleripad
+                            self.window?.makeKeyAndVisible()
+                 */
+                return
+                
             }
             return
         }

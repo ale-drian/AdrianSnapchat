@@ -77,10 +77,10 @@
                                 <rect key="frame" x="154" y="621" width="106" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Registrarme">
-                                    <color key="titleColor" red="0.57106598980000001" green="0.1868181246" blue="0.14933958829999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="KW3-hz-rMH" kind="presentation" modalPresentationStyle="fullScreen" id="Ebf-13-xoa"/>
+                                    <segue destination="KW3-hz-rMH" kind="presentation" identifier="SignInToRegisterSegue" modalPresentationStyle="fullScreen" id="Ebf-13-xoa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -105,21 +105,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="D2k-S8-5f2"/>
                     <connections>
                         <outlet property="emailTextField" destination="K0Z-HL-XLn" id="qFA-a8-4gB"/>
                         <outlet property="passwordTextField" destination="a9E-H6-0B6" id="dZ7-NV-Vcj"/>
                         <outlet property="signInButton" destination="JZA-Sd-ebt" id="GIA-hw-lm0"/>
-                        <segue destination="9G8-aa-Y26" kind="presentation" identifier="iniciarsesionSegue" modalPresentationStyle="fullScreen" id="XRc-VU-J5a"/>
+                        <segue destination="9G8-aa-Y26" kind="show" identifier="iniciarsesionSegue" id="XRc-VU-J5a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="231.8840579710145" y="59.598214285714285"/>
+            <point key="canvasLocation" x="-29" y="-155"/>
         </scene>
         <!--Snaps View Controller-->
         <scene sceneID="A0B-XB-u5S">
             <objects>
-                <viewController id="iL6-yp-FAe" customClass="SnapsViewController" customModule="AdrianSnapchat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SnapsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iL6-yp-FAe" customClass="SnapsViewController" customModule="AdrianSnapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VWb-uw-H4f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -237,7 +238,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mDo-EZ-yws"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Lista de usuarios" id="WWR-YI-Xuc"/>
+                    <navigationItem key="navigationItem" title="Lista de usuarios" id="WWR-YI-Xuc">
+                        <barButtonItem key="backBarButtonItem" title="Enviar Mensaje" id="wQf-Kd-Qmv"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="listaUsuarios" destination="hYG-Vq-u6R" id="h5i-rA-i6g"/>
                     </connections>
@@ -335,6 +338,7 @@
                                 </state>
                                 <connections>
                                     <action selector="iniciarSesionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0nd-pV-K90"/>
+                                    <action selector="registrarTapped:" destination="KW3-hz-rMH" eventType="touchUpInside" id="vPh-Id-jSf"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5jJ-Zd-QHs" customClass="GIDSignInButton">
@@ -352,7 +356,7 @@
                                     <color key="titleColor" red="0.57106598980000001" green="0.1868181246" blue="0.14933958829999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="r2L-KU-IUR"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="RegisterToSignInSegue" modalPresentationStyle="fullScreen" id="r2L-KU-IUR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -382,13 +386,22 @@
                         <viewLayoutGuide key="safeArea" id="UyZ-8s-Fw3"/>
                     </view>
                     <navigationItem key="navigationItem" id="m8Y-fY-gVk"/>
+                    <connections>
+                        <outlet property="confirmationPasswordTextField" destination="qcd-gD-wiF" id="vZa-ZD-k64"/>
+                        <outlet property="emailRTextField" destination="i1C-mI-96Z" id="q66-A3-fJQ"/>
+                        <outlet property="passwordRTextField" destination="3tc-J6-quS" id="326-aN-Aa1"/>
+                        <segue destination="9G8-aa-Y26" kind="presentation" identifier="registrarSegue" modalPresentationStyle="fullScreen" id="RCg-AO-lDp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7nT-hY-fS9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-564" y="513"/>
+            <point key="canvasLocation" x="-694" y="567"/>
         </scene>
     </scenes>
     <resources>
         <image name="person.3.fill" catalog="system" width="71" height="34"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="RCg-AO-lDp"/>
+    </inferredMetricsTieBreakers>
 </document>
