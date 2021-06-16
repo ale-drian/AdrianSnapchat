@@ -9,17 +9,22 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import GoogleSignIn
 
 class RegistroViewController: UIViewController {
 
     @IBOutlet weak var emailRTextField: UITextField!
     @IBOutlet weak var passwordRTextField: UITextField!
     @IBOutlet weak var confirmationPasswordTextField: UITextField!
+   
+    @IBOutlet weak var SignInGoogleButton: GIDSignInButton!
+    
     var ref = Database.database().reference()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        // Auth con google
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance().signIn()
     }
     
     @IBAction func registrarTapped(_ sender: Any) {

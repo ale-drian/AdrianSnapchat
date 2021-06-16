@@ -77,7 +77,7 @@
                                 <rect key="frame" x="154" y="621" width="106" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Registrarme">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.57106598980000001" green="0.1868181246" blue="0.14933958829999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <segue destination="KW3-hz-rMH" kind="presentation" identifier="SignInToRegisterSegue" modalPresentationStyle="fullScreen" id="Ebf-13-xoa"/>
@@ -387,6 +387,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="m8Y-fY-gVk"/>
                     <connections>
+                        <outlet property="SignInGoogleButton" destination="5jJ-Zd-QHs" id="lEe-PS-qj3"/>
                         <outlet property="confirmationPasswordTextField" destination="qcd-gD-wiF" id="vZa-ZD-k64"/>
                         <outlet property="emailRTextField" destination="i1C-mI-96Z" id="q66-A3-fJQ"/>
                         <outlet property="passwordRTextField" destination="3tc-J6-quS" id="326-aN-Aa1"/>
