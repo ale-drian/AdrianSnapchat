@@ -20,6 +20,8 @@
 		688252DF2672109400D6718C /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688252DE2672109400D6718C /* RegistroViewController.swift */; };
 		689C1310266E722000BB7F4D /* ImagenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689C130F266E722000BB7F4D /* ImagenViewController.swift */; };
 		68A1B473266F4CCE00A3A1DE /* ElegirUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A1B472266F4CCE00A3A1DE /* ElegirUsuarioViewController.swift */; };
+		68AC4EDD2679DD8300836A84 /* Snap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AC4EDC2679DD8300836A84 /* Snap.swift */; };
+		68AC4EDF2679F1C500836A84 /* VerSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AC4EDE2679F1C500836A84 /* VerSnapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		688252DE2672109400D6718C /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
 		689C130F266E722000BB7F4D /* ImagenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagenViewController.swift; sourceTree = "<group>"; };
 		68A1B472266F4CCE00A3A1DE /* ElegirUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElegirUsuarioViewController.swift; sourceTree = "<group>"; };
+		68AC4EDC2679DD8300836A84 /* Snap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snap.swift; sourceTree = "<group>"; };
+		68AC4EDE2679F1C500836A84 /* VerSnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerSnapViewController.swift; sourceTree = "<group>"; };
 		8D44F45C661AB454B2616540 /* Pods-AdrianSnapchat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdrianSnapchat.release.xcconfig"; path = "Target Support Files/Pods-AdrianSnapchat/Pods-AdrianSnapchat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +119,7 @@
 				6871E215266818080087F55F /* SnapsViewController.swift */,
 				68A1B472266F4CCE00A3A1DE /* ElegirUsuarioViewController.swift */,
 				688252DE2672109400D6718C /* RegistroViewController.swift */,
+				68AC4EDE2679F1C500836A84 /* VerSnapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				688252DC2672000E00D6718C /* Usuario.swift */,
+				68AC4EDC2679DD8300836A84 /* Snap.swift */,
 			);
 			path = Modelos;
 			sourceTree = "<group>";
@@ -263,7 +269,9 @@
 			files = (
 				6871E216266818080087F55F /* SnapsViewController.swift in Sources */,
 				689C1310266E722000BB7F4D /* ImagenViewController.swift in Sources */,
+				68AC4EDD2679DD8300836A84 /* Snap.swift in Sources */,
 				688252DD2672000E00D6718C /* Usuario.swift in Sources */,
+				68AC4EDF2679F1C500836A84 /* VerSnapViewController.swift in Sources */,
 				68021F5C266303A7009BB696 /* iniciarSesionViewController.swift in Sources */,
 				68021F58266303A7009BB696 /* AppDelegate.swift in Sources */,
 				688252DF2672109400D6718C /* RegistroViewController.swift in Sources */,
