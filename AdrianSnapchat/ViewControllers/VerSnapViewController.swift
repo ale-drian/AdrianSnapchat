@@ -26,6 +26,8 @@ class VerSnapViewController: UIViewController {
         imagenView.sd_setImage(with: URL(string: snap.imagenURL), completed: nil)
     }
     
+    
+    
     override func viewWillDisappear(_ animated: Bool) {
     ref.child("usuarios").child((Auth.auth().currentUser?.uid)!).child("snaps").child(snap.id).removeValue()
     Storage.storage().reference().child("imagenes").child("\(snap.imagenID).jpg").delete{ (error) in

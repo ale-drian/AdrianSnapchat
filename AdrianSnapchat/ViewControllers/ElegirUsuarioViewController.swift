@@ -19,6 +19,8 @@ class ElegirUsuarioViewController: UIViewController, UITableViewDelegate, UITabl
     var imagenURL = ""
     var descrip = ""
     var imagenID = ""
+    var audioURL = ""
+    var audioID = ""
     
     var ref = Database.database().reference()
         
@@ -51,7 +53,7 @@ class ElegirUsuarioViewController: UIViewController, UITableViewDelegate, UITabl
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let usuario = usuarios[indexPath.row]
-        let snap = ["from": Auth.auth().currentUser?.email, "descripcion": descrip, "imagenURL": imagenURL, "imagenID": imagenID]
+        let snap = ["from": Auth.auth().currentUser?.email, "descripcion": descrip, "imagenURL": imagenURL, "imagenID": imagenID, "audioURL": audioURL, "audioID": audioID]
         ref.child("usuarios").child(usuario.uid).child("snaps").childByAutoId().setValue(snap)
         navigationController?.popViewController(animated: true)
     }
